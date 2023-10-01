@@ -1,0 +1,105 @@
+:root {
+  
+    --darkred: #dd8534;
+    --platinum: #e5e5e5;
+   
+    --white: #fff;
+    --thumb: #edf2f4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 16px / 24px "Rubik", sans-serif;
+    color: var(--black);
+    
+   
+}
+
+.containero {
+    max-width: 1400px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+
+.cardos {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none !important;
+    overflow-x: scroll;
+    -ms-scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
+}
+
+.cardo {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    
+  
+    
+        scroll-snap-align: start;
+    transition: all 0.2s;
+    
+}
+
+
+
+
+
+
+
+
+
+.cardos::-webkit-scrollbar {
+    height: 12px;
+}
+
+.cardos::-webkit-scrollbar-thumb,
+.cardos::-webkit-scrollbar-track {
+    border-radius: 92px;
+}
+
+.cardos::-webkit-scrollbar-thumb {
+    background: var(--darkred);
+}
+
+.cardos::-webkit-scrollbar-track {
+    background: var(--thumb);
+}
+
+@media (min-width: 500px) {
+    .cardo {
+        flex-basis: calc(50% - 10px);
+    }
+
+    .cardo:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (min-width: 700px) {
+    .cardo {
+        flex-basis: calc(calc(100% / 3) - 20px);
+    }
+
+    .cardo:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+@media (min-width: 1100px) {
+    .cardo {
+        flex-basis: calc(25% - 30px);
+    }
+
+    .cardo:not(:last-child) {
+        margin-right: 40px;
+    }
+}
